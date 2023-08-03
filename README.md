@@ -21,8 +21,16 @@ There are per-commit development builds available [here](https://github.com/Evil
 Portable builds are provided for AppImage on Linux, Windows, and macOS.
 
 ## Building
+There are some known errors, i will show how to fix that
+**1. Windarkmode Error**
+If you wanna fix that error to compile polymc offline with dark mode feature you just need to find **WinDarkmode.cpp** in your polymc-offline folder.
+when you found that you just need to change this line :
+**asm volatile("mov %%rcx, %%r10; movl %0, %%eax; syscall; ret"**
+TO
+**asm volatile("syscall; ret"**
+it will fix your error and make your polymc compileable!
 
-If you want to build PolyMC yourself, check [Build Instructions](https://polymc.org/wiki/development/build-instructions/) for build instructions.
+**If you want to build PolyMC yourself, check [Build Instructions](https://polymc.org/wiki/development/build-instructions/) for build instructions.**
 
 ## Translations
 
